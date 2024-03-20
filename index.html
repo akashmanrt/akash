@@ -14,38 +14,38 @@
 <p>
 <FONT FACE="Bell MT" SIZE="5">
              FIRSTNAME:-
- <input type="text" id="name" name="name" required>   <BR><BR>                            
+ <input type="text" id="firstname" name="firstname" required><BR><BR>                            
              MIDDLENAME:-
- <input type="text" id="name" name="name" required><BR><BR>
+ <input type="text" id="middlename" name="middlename" required><BR><BR>
 LAST NAME:-
- <input type="text" id="name" name="name" required><BR><BR>
+ <input type="text" id="lastname" name="lastname" required><BR><BR>
 PHOTO:-<BR> <input type="file" id="photo" name="photo" required><BR><BR>
 COURSE:-
-<SELECT>
-<OPTION VALUE="COURSE" required>COURSE</OPTION>
-<OPTION VALUE="ADCA" required>ADCA</OPTION>
-<OPTION VALUE="DCA" required>DCA</OPTION>
-<OPTION VALUE="KYP" required>KYP</OPTION>
-<OPTION VALUE="CFA" required>CFA</OPTION>
+<SELECT id="course" name="course" required>
+<OPTION VALUE="COURSE">COURSE</OPTION>
+<OPTION VALUE="ADCA">ADCA</OPTION>
+<OPTION VALUE="DCA">DCA</OPTION>
+<OPTION VALUE="KYP">KYP</OPTION>
+<OPTION VALUE="CFA">CFA</OPTION>
 </SELECT><BR><BR>
 GENDER:-
- <input type="radio" id="name" name="name" required/>MALE
- <input type="radio" id="name" name="name" required/>FEMALE
- <input type="radio" id="name" name="name" required/>OTHER
+ <input type="radio" id="male" name="gender" value="male" required>MALE
+ <input type="radio" id="female" name="gender" value="female" required>FEMALE
+ <input type="radio" id="other" name="gender" value="other" required>OTHER
 <BR><BR>
-PHONE:-<SELECT>
+PHONE:-<SELECT id="countrycode" name="countrycode" required>
 <OPTION VALUE="IND">+91</OPTION>
 <OPTION VALUE="PAK">+92</OPTION>
 <OPTION VALUE="USA">+1</OPTION>
 <OPTION VALUE="UK">+44</OPTION>
 <OPTION VALUE="AUS">+60</OPTION>
-</SELECT><INPUT TYPE="NUMBER" VALUE""><BR><BR>
+</SELECT><INPUT TYPE="NUMBER" id="phone" name="phone" required><BR><BR>
 ADDRESS:-
-<TEXTAREA ID="ID" NAME="NAME" ROWS="1" COLS="50" required></TEXTAREA><br><br>
+<TEXTAREA id="address" name="address" rows="1" cols="50" required></TEXTAREA><br><br>
 EMAIL:-<input type="email" id="email" name="email" required/>
   BR><BR>
-SET YOUR PASSWORD:-<INPUT TYPE="ALPHANUMERIC"><BR><BR>
-    RENTER YOUR PASSWORD:-<INPUT TYPE="ALPHANUMERIC"><BR><BR>
+SET YOUR PASSWORD:-<INPUT TYPE="password" id="password" name="password" required><BR><BR>
+    RENTER YOUR PASSWORD:-<INPUT TYPE="password" id="confirmpassword" name="confirmpassword" required><BR><BR>
 
       <button id="register-btn">Register</button>
       <div id="success-popup" class="popup">
