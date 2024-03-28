@@ -1,60 +1,115 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Akash</TITLE>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Registration Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    #container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .center {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-<FIELDSET>
-<div align="center">
-<table border=20 bgcolor="red">
-<tr>
-<td><B><h1>RAGISTRATION PAGE</B></h1></TD>
-</tr></table></div>
-<p>
-<FONT FACE="Bell MT" SIZE="5">
-             FIRSTNAME:-
- <input type="text" id="firstname" name="firstname" required><BR><BR>                            
-             MIDDLENAME:-
- <input type="text" id="middlename" name="middlename" required><BR><BR>
-LAST NAME:-
- <input type="text" id="lastname" name="lastname" required><BR><BR>
-PHOTO:-<BR> <input type="file" id="photo" name="photo" required><BR><BR>
-COURSE:-
-<SELECT id="course" name="course" required>
-<OPTION VALUE="COURSE">COURSE</OPTION>
-<OPTION VALUE="ADCA">ADCA</OPTION>
-<OPTION VALUE="DCA">DCA</OPTION>
-<OPTION VALUE="KYP">KYP</OPTION>
-<OPTION VALUE="CFA">CFA</OPTION>
-</SELECT><BR><BR>
-GENDER:-
- <input type="radio" id="male" name="gender" value="male" required>MALE
- <input type="radio" id="female" name="gender" value="female" required>FEMALE
- <input type="radio" id="other" name="gender" value="other" required>OTHER
-<BR><BR>
-PHONE:-<SELECT id="countrycode" name="countrycode" required>
-<OPTION VALUE="IND">+91</OPTION>
-<OPTION VALUE="PAK">+92</OPTION>
-<OPTION VALUE="USA">+1</OPTION>
-<OPTION VALUE="UK">+44</OPTION>
-<OPTION VALUE="AUS">+60</OPTION>
-</SELECT><INPUT TYPE="NUMBER" id="phone" name="phone" required><BR><BR>
-ADDRESS:-
-<TEXTAREA id="address" name="address" rows="1" cols="50" required></TEXTAREA><br><br>
-EMAIL:-<input type="email" id="email" name="email" required/>
-  BR><BR>
-SET YOUR PASSWORD:-<INPUT TYPE="password" id="password" name="password" required><BR><BR>
-    RENTER YOUR PASSWORD:-<INPUT TYPE="password" id="confirmpassword" name="confirmpassword" required><BR><BR>
-
-      <button id="register-btn">Register</button>
-      <div id="success-popup" class="popup">
-          <h2>Registration Successful!</h2>
-          <p>Thank You For Registering. Your Record Is Succesfully Saved.</p>
-          <button id="close-popup-btn">Close</button>
-      </div>
-      <script src="script.js"></script>    
-  <a href="AKASH.html" style="color: #cc0000"><input type="button" value="ABOUT US"></a>
-</FIELDSET>
+  <div id="container">
+    <h1>Registration Page</h1>
+    <form>
+      <fieldset>
+        <div class="center">
+          <label for="firstname">First Name:</label>
+          <input type="text" id="firstname" name="firstname" required><br>
+          <label for="middlename">Middle Name:</label>
+          <input type="text" id="middlename" name="middlename" required><br>
+          <label for="lastname">Last Name:</label>
+          <input type="text" id="lastname" name="lastname" required><br>
+          <label for="photo">Photo:</label><br>
+          <input type="file" id="photo"><br>
+          <label for="course">Course:</label><br>
+          <select id="course">
+            <option value="COURSE">Select Course</option>
+            <option value="ADCA">ADCA</option>
+            <option value="DCA">DCA</option>
+            <option value="KYP">KYP</option>
+            <option value="CFA">CFA</option>
+          </select><br>
+          <label>Gender:</label><br>
+          <input type="radio" id="male" name="gender" value="male" required>
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Other</label><br>
+          <label for="phone">Phone:</label><br>
+          <select id="phone">
+            <option value="IND">+91</option>
+            <option value="PAK">+92</option>
+            <option value="USA">+1</option>
+            <option value="UK">+44</option>
+            <option value="AUS">+60</option>
+          </select>
+          <input type="number" id="phone-number"><br>
+          <label for="address">Address:</label><br>
+          <textarea id="address" rows="4" cols="50"></textarea><br>
+          <label for="email">Email:</label><br>
+          <input type="email" id="email"><br>
+          <label for="password">Set Your Password:</label><br>
+          <input type="password" id="password"><br>
+          <label for="confirm-password">Confirm Your Password:</label><br>
+          <input type="password" id="confirm-password"><br>
+          <button type="submit">Submit</button>
+          <input type="reset" value="Reset"><br><br>
+          <a href="about_us.html" style="color:#588898">About Us</a>
+        </div>
+      </fieldset>
+    </form>
+  </div>
 </body>
 </html>
+
