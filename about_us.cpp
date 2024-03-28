@@ -16,18 +16,18 @@ int main() {
     map<string, map<char, string>> quiz;
 
     // Add questions and options
-    quiz["What is the capital of France?"] = {
-        {'A', "London"},
-        {'B', "Paris"},
-        {'C', "Berlin"},
+    quiz["What is the capital of India?"] = {
+        {'A', "Mumbai"},
+        {'B', "Delhi"},
+        {'C', "Channai"},
         {'D', "Rome"}
     };
 
-    quiz["Who wrote 'Romeo and Juliet'?"] = {
-        {'A', "William Shakespeare"},
-        {'B', "Charles Dickens"},
-        {'C', "Jane Austen"},
-        {'D', "Leo Tolstoy"}
+    quiz["Who Is Best Indian'Rapper'?"] = {
+        {'A', "King👑"},
+        {'B', "Devine👏"},
+        {'C', "Emiway Bantai❤️"},
+        {'D', "Mc Stan🖕"}
     };
 
     // Iterate through each question in the quiz
@@ -41,7 +41,7 @@ int main() {
         cin >> answer;
 
         // Check if the answer is correct
-        if (toupper(answer) == 'B') {
+        if (toupper(answer) == 'A') {
             cout << "Correct!" << endl;
         } else {
             cout << "Incorrect!" << endl;
