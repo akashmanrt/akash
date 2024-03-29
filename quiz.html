@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz Game</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Quiz Game</h1>
+    <div id="question1">
+      <h2>Question 1: What is the capital of India?</h2>
+      <button onclick="checkAnswer(0, 'Delhi')">Delhi</button>
+      <button onclick="checkAnswer(0, 'Mumbai')">Mumbai</button>
+      <button onclick="checkAnswer(0, 'Bangalore')">Bangalore</button>
+      <button onclick="showQuestion(1)" class="hidden">Next</button>
+    </div>
+    <div id="question2" class="hidden">
+      <h2>Question 2: Which river is the longest in India?</h2>
+      <button onclick="checkAnswer(1, 'Ganga')">Ganga</button>
+      <button onclick="checkAnswer(1, 'Yamuna')">Yamuna</button>
+      <button onclick="checkAnswer(1, 'Brahmaputra')">Brahmaputra</button>
+      <button onclick="showQuestion(2)" class="hidden">Next</button>
+    </div>
+    <div id="question3" class="hidden">
+      <h2>Question 3: Who was the first president of India?</h2>
+      <button onclick="checkAnswer(2, 'Rajendra Prasad')">Rajendra Prasad</button>
+      <button onclick="checkAnswer(2, 'C. Rajagopalachari')">C. Rajagopalachari</button>
+      <button onclick="checkAnswer(2, 'Sardar Vallabhbhai Patel')">Sardar Vallabhbhai Patel</button>
+      <button onclick="showResult()" class="hidden">Submit</button>
+    </div>
+    <div id="result" class="hidden">
+      <h2>Your result: <span id="resultText"></span></h2>
+      <button onclick="location.reload()">Play Again</button>
+    </div>
+    <script>
+      let correctAnswers = ['Delhi', 'Ganga', 'Rajendra Prasad'];
+      let currentQuestion = 0;
+      let correctCount = 0;
+
+      function checkAnswer(q, a) {
+        if (correctAnswers[q] == a) {
+          correctCount++;
+        }
+        showQuestion(q + 1);
+      }
+
+      function showQuestion(q) {
+        document.getElementById('question' + currentQuestion).className = 'hidden';
+        document.getElementById('question' + q).className = '';
+        currentQuestion = q;
+        if (q == 3) {
+          showResult();
+        }
+      }
+
+      function showResult() {
+        document.getElementById('question3').className = 'hidden';
+        document.getElementById('result').className = '';
+        document.getElementById('resultText').innerHTML = correctCount + ' out of 3';
+      }
+    </script>
+  </body>
+</html>
